@@ -1,0 +1,5 @@
+url,method,status
+https://api.openbrewerydb.org/v1/breweries/random,get,200
+https://api.openbrewerydb.org/v1/breweries/meta,get,200
+https://api.openbrewerydb.org/v1/breweries/metadf,get,404
+https://api.openbrewerydb.org/v1/breweriesdf,get,404

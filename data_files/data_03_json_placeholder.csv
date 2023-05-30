@@ -1,0 +1,8 @@
+url,method,status
+https://jsonplaceholder.typicode.com/posts/1/comments,get,200
+https://jsonplaceholder.typicode.com/albums/1/photos,get,200
+https://jsonplaceholder.typicode.com/users/1/albums,get,200
+https://jsonplaceholder.typicode.com/users/1/todos,get,200
+https://jsonplaceholder.typicode.com/posts,get,200
+https://jsonplaceholder.typicode.com/posts/23,get,200
+https://jsonplaceholder.typicode.com/posts/101,get,404

@@ -1,0 +1,6 @@
+url,method,status
+https://dog.ceo/api/breeds/image/random,get,200
+https://dog.ceo/api/breed/hound/list,get,200
+https://dog.ceo/api/breeds/list/all,get,200
+https://dog.ceo/api/breed/hound/list_wed,get,404
+https://dog.ceo/api/breeds/list/allin,get,404
