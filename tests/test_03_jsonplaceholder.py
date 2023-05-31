@@ -1,7 +1,11 @@
 import requests
 import pytest
+import json
 
+from jsonschema import validate
 from csv import reader
+from data_files import JSON_SCHEMA_POST
+from data_files import JSON_SCHEMA_POSTS
 
 def http_method(name: str):
     return requests.get if name.lower() == "get" else requests.post
@@ -35,3 +39,12 @@ def test_comments_json_not_null():\
 
 def test_delete():
     assert term.status_code == 200
+
+def assert_valid_schema(data, schema_file):
+    with open(schema_file) as f:
+        schema_11 = json.load(f)
+    return validate(instance=data, schema=schema_11)
+
+def test_get_post_schema_json():
+    resp = requests.get('https://jsonplaceholder.typicode.com/posts/1')
+    assert_valid_schema(resp.json(), JSON_SCHEMA_POST)
